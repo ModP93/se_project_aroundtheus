@@ -1,0 +1,57 @@
+.cards {
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+  /*font-size: 24px;
+    line-height: 29.05px;*/
+  color: #000;
+}
+
+.cards__gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 282px);
+  gap: 20px 17px;
+  /*list-style-type: none;*/
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
+/*don't understand why the top of cards aren't rounding*/
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  list-style-type: none;
+  overflow: hidden;
+}
+
+.card__image {
+  width: 282px;
+  height: 282px;
+}
+
+.card__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 20px;
+  /*border-radius: 10px;*/
+}
+
+/* moved to cards, class removed from h2 element*/
+.card__title {
+  margin: 0;
+  font-size: 24px;
+  line-height: 29.05px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card__like-button {
+  border-style: none;
+  background: transparent center no-repeat;
+  padding: 0;
+  margin: 0;
+  align-self: center;
+  width: 21px;
+  height: 18px;
+}

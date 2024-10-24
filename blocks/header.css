@@ -1,0 +1,12 @@
+.header {
+  border-bottom: 1px;
+  border-color: #545454;
+  border-bottom-style: solid;
+  opacity: 70%;
+  padding: 45px 0 41px;
+}
+
+.header__title {
+  color: #fff;
+  opacity: 100%;
+}
