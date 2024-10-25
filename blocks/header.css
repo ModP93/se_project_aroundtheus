@@ -1,8 +1,7 @@
 .header {
   border-bottom: 1px;
-  border-color: #545454;
+  border-color: rgba(84, 84, 84, .7);
   border-bottom-style: solid;
-  opacity: 70%;
   padding: 45px 0 41px;
 }
 

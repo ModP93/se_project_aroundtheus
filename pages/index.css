@@ -5,12 +5,14 @@
 @import url("../blocks/profile.css");
 @import url("../blocks/gallery.css");
 @import url("../blocks/footer.css");
+
 @media screen and (max-width: 879px) {
   .page__section {
     max-width: 800px;
     width: 100%;
     position: relative;
     margin: 0 auto;
+    box-sizing: border-box;
   }
   .header {
     padding-left: 27px;
@@ -123,4 +125,3 @@
     margin: 36px auto 0;
   }
 }
-/*I don't see any horizontal scrolling at 651 screen resolution*/
