@@ -2,9 +2,9 @@
 
 ### Overview
 
-* Media Queries for Responsive Layouts
-* Grid/Flexbox Combinations
-* Different Visual Effects and Images
+- Media Queries for Responsive Layouts
+- Grid/Flexbox Combinations
+- Different Visual Effects and Images
 
 **Media Queries for Responsive Layouts**
 
@@ -18,8 +18,8 @@ The profile.css block contains the most responsive coding as it has three differ
 
 There are serval selectors present in the CSS that are psuedo classes that changes the look of images and cursor for the users.
 Below is are screenshots showing the images applied in the html:
-[header/profile-avatar/edit&add-buttons](image-2.png)
-[gallery-cards/like-button](image-3.png)
+[header/profile-avatar/edit&add-buttons](./images/image-2.png)
+[gallery-cards/like-button](./images/image-3.png)
 
 **Distribution**
 Site should be accessible in any browser copatible with Github repositories.
