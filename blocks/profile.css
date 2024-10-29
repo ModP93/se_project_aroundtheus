@@ -12,7 +12,7 @@
 }
 
 .profile__info {
-  display: grid; 
+  display: grid;
   grid-template-columns: auto auto;
   align-items: center;
 }
@@ -22,7 +22,7 @@
   font-weight: 500;
   font-size: 42px;
   line-height: 48px;
-  color: #fff; 
+  color: #fff;
   margin: 0;
 }
 
@@ -36,7 +36,7 @@
   align-self: flex-start;
 }
 .profile__edit-button {
-  border: 2px;
+  border: 1px;
   border-color: #fff;
   border-style: solid;
   height: 24px;
@@ -51,7 +51,7 @@
 }
 
 .profile__add-button {
-  border: 1px;
+  border: 2px;
   border-color: #fff;
   border-style: solid;
   height: 50px;
