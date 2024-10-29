@@ -23,6 +23,7 @@ Below is are screenshots showing the images applied in the html:
 
 **Distribution**
 Site should be accessible in any browser copatible with Github repositories.
+[site link](https://modp93.github.io/se_project_aroundtheus/index.html)
 
 **Breif Explanation of the Site**
-[site overview](https://drive.google.com/file/d/16SDaEzQj4qRU_RAxTkzRrcJqfVRpOI-4/view?usp=drive_link)
+[site link](https://drive.google.com/file/d/19kt4iZg6atdutt0mLVZAhRfE8PAY9dH0/view?usp=drive_link)
