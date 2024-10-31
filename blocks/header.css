@@ -1,6 +1,6 @@
 .header {
   border-bottom: 1px;
-  border-color: rgba(84, 84, 84, .7);
+  border-color: rgba(84, 84, 84, 0.7);
   border-bottom-style: solid;
   padding: 45px 0 41px;
 }
@@ -8,4 +8,11 @@
 .header__title {
   color: #fff;
   opacity: 100%;
+}
+
+@media screen and (max-width: 879px) {
+  .header {
+    padding-left: 27px;
+    width: 100%;
+  }
 }
