@@ -6,7 +6,6 @@
 }
 
 .header__title {
-  color: #fff;
   opacity: 100%;
 }
 
@@ -14,5 +13,16 @@
   .header {
     padding-left: 27px;
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .header {
+    max-width: 650px;
+    padding: 28px 0 32px 27px;
+  }
+  .header__title {
+    width: 126px;
+    height: 24px;
   }
 }
