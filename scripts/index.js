@@ -24,3 +24,4 @@ const initialCards=[
         link:'\Users\amond\Projects\se_project_aroundtheus\images\jpeg-optimizer_yosemite-valley.jpg'
     }
 ]
+
