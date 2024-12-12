@@ -42,110 +42,7 @@
           </button>
         </section>
         <section class="cards page__section">
-          <ul class="cards__gallery">
-            <li class="card">
-              <img
-                src="./images/jpeg-optimizer_dripping-springs.jpg"
-                alt="dripping-springs texas"
-                class="card__image"
-              />
-              <div class="card__content">
-                <h2 class="card__title">Dripping Springs</h2>
-                <button class="card__like-button" type="button">
-                  <img
-                    src="./images/like-button.svg"
-                    alt="heart-shaped button"
-                    class="card__like-image"
-                  />
-                </button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="./images/jpeg-optimizer_fairfield-star-house.jpg"
-                alt="fairfield-UK"
-                class="card__image"
-              />
-              <div class="card__content">
-                <h2 class="card__title">Fairfield</h2>
-                <button class="card__like-button" type="button">
-                  <img
-                    src="./images/like-button.svg"
-                    alt="heart-shaped button"
-                    class="card__like-image"
-                  />
-                </button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="./images/jpeg-optimizer_mammoth-lakes.jpg"
-                alt="mammoth-lakes-california"
-                class="card__image"
-              />
-              <div class="card__content">
-                <h2 class="card__title">Mammoth Lakes</h2>
-                <button class="card__like-button" type="button">
-                  <img
-                    src="./images/like-button.svg"
-                    alt="heart-shaped button"
-                    class="card__like-image"
-                  />
-                </button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="./images/jpeg-optimizer_olympic-peninsula-washington.jpg"
-                alt="olympic-peninsula-washington"
-                class="card__image"
-              />
-              <div class="card__content">
-                <h2 class="card__title">Olympic Peninsula</h2>
-                <button class="card__like-button" type="button">
-                  <img
-                    src="./images/like-button.svg"
-                    alt="heart-shaped button"
-                    class="card__like-image"
-                  />
-                </button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="./images/jpeg-optimizer_solheimasandur-plane-wreck-iceland.jpg"
-                alt="solheimasandur-plane-wreck-iceland"
-                class="card__image"
-              />
-              <div class="card__content">
-                <h2 class="card__title">Solheimasandur Plane Wreck</h2>
-                <button class="card__like-button" type="button">
-                  <img
-                    src="./images/like-button.svg"
-                    alt="heart-shaped button"
-                    class="card__like-image"
-                  />
-                </button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="./images/jpeg-optimizer_yosemite-valley.jpg"
-                alt="yosemite-valley"
-                class="card__image"
-              />
-              <div class="card__content">
-                <h2 class="card__title">Yosemite Valley</h2>
-                <button class="card__like-button" type="button">
-                  <img
-                    src="./images/like-button.svg"
-                    alt="heart-shaped button"
-                    class="card__like-image"
-                  />
-                </button>
-              </div>
-            </li>
-          </ul>
+          <ul class="cards__gallery"></ul>
         </section>
       </main>
       <footer class="footer page__section">
@@ -166,12 +63,14 @@
           <input
             type="text"
             name="profile-name"
+            id="profile-name-input"
             placeholder="Name"
             class="modal__profile-name"
           />
           <input
             type="text"
             name="description"
+            id="profile-description-input"
             placeholder="Description"
             class="modal__description"
           />
@@ -179,6 +78,22 @@
         </form>
       </div>
     </div>
+
+    <template id="card-template">
+      <li class="card">
+        <img src="" alt="" class="card__image" />
+        <div class="card__content">
+          <h2 class="card__title"></h2>
+          <button class="card__like-button" type="button">
+            <img
+              src="./images/like-button.svg"
+              alt="heart-shaped button"
+              class="card__like-image"
+            />
+          </button>
+        </div>
+      </li>
+    </template>
     <script src="./scripts/index.js"></script>
   </body>
 </html>
