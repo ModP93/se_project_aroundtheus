@@ -43,11 +43,11 @@ const cardTemplate=document.querySelector('#card-template').content.firstElement
     profileNameInput.value=profileName.textContent;
     profileDescriptionInput.value=profileDescription.textContent;
 
-    profileEditModal.classList.add('modal__open');
+    profileEditModal.classList.add('modal_open');
 }
 
 function closeEditProfile() {
-    profileEditModal.classList.remove('modal__open');
+    profileEditModal.classList.remove('modal_open');
 }
 
 function getCardElement(data) {

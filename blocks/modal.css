@@ -12,7 +12,7 @@
   margin: 0;
   padding: 0 19px;
 }
-.modal__open {
+.modal_open {
   display: flex;
 }
 .modal__container {
@@ -46,7 +46,7 @@
   display: flex;
   flex-direction: column;
 }
-.modal__profile-name {
+.modal__input:first-of-type {
   width: 358px;
   height: 27.26px;
   margin: 54px auto 0;
@@ -57,7 +57,7 @@
   font-size: 14px;
   line-height: 16.94px;
 }
-.modal__description {
+.modal__input:last-of-type {
   width: 358px;
   height: 27.34px;
   margin: 29.74px auto 0;
@@ -87,6 +87,7 @@
     height: 322px;
   }
   .modal__close-button {
+    /* the modal's close button is meant to shrink 14px for mobile screens*/
     width: 26px;
     height: 26px;
     top: -61px;
@@ -95,12 +96,13 @@
   .modal__edit-profile {
     font-size: 18px;
     line-height: 21.78px;
+    margin-left: 18px;
   }
-  .modal__profile-name {
+  .modal__input:first-of-type {
     width: 238px;
     height: 27px;
   }
-  .modal__description {
+  .modal__input:last-of-type {
     width: 238px;
     height: 27px;
   }
