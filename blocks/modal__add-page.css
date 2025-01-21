@@ -1,0 +1,115 @@
+.modal__add-page {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0 19px;
+}
+.modal_open {
+  display: flex;
+}
+.modal__container_add-page {
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  border-radius: 10px;
+  position: relative;
+  width: 430px;
+  height: 330px;
+}
+.modal__close-button {
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: -40px;
+  right: -40px;
+  cursor: pointer;
+}
+.modal__new-place {
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 900;
+  color: #000;
+  font-size: 24px;
+  line-height: 29.05px;
+  margin: 34px 0 0 36px;
+}
+.modal__form {
+  display: flex;
+  flex-direction: column;
+}
+.modal__input:first-of-type {
+  width: 358px;
+  height: 27.26px;
+  margin: 54px auto 0;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16.94px;
+}
+.modal__input:last-of-type {
+  width: 358px;
+  height: 27.34px;
+  margin: 29.74px auto 0;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16.94px;
+}
+.modal__create-button {
+  width: 358px;
+  height: 50.15px;
+  margin: 48px auto 36.51px;
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 400;
+  color: #fff;
+  font-size: 18px;
+  line-height: 21.78px;
+  background-color: #000;
+  border-radius: 2px;
+}
+
+@media screen and (max-width: 650px) {
+  .modal__container_add-page {
+    width: 282px;
+    height: 322px;
+  }
+  .modal__close-button {
+    /* the modal's close button is meant to shrink 14px for mobile screens*/
+    width: 26px;
+    height: 26px;
+    top: -61px;
+    right: 20px;
+  }
+  .modal__new-place {
+    font-size: 18px;
+    line-height: 21.78px;
+    margin-left: 18px;
+  }
+  .modal__input:first-of-type {
+    width: 238px;
+    height: 27px;
+  }
+  .modal__input:last-of-type {
+    width: 238px;
+    height: 27px;
+  }
+  .modal__create-button {
+    width: 238px;
+    height: 46px;
+    font-size: 14px;
+    line-height: 16.94px;
+  }
+}

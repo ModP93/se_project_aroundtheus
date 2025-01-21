@@ -49,7 +49,7 @@
         <p class="footer__content">&copy; 2024 Around the U.S.</p>
       </footer>
     </div>
-    <div class="modal">
+    <div class="modal__profile">
       <div class="modal__container">
         <button class="modal__close-button">
           <img
@@ -75,6 +75,36 @@
             class="modal__input"
           />
           <button class="modal__save-button">Save</button>
+        </form>
+      </div>
+    </div>
+    <div class="modal__add-page">
+      <div class="modal__container_add-page">
+        <button class="modal__close-button">
+          <img
+            src="./images/Close-Icon.svg"
+            alt="X shaped button"
+            class="modal__close-image"
+          />
+        </button>
+
+        <form class="modal__form">
+          <h1 class="modal__new-place">New Place</h1>
+          <input
+            type="text"
+            name="new-place"
+            id="title-input"
+            placeholder="Title"
+            class="modal__input"
+          />
+          <input
+            type="text"
+            name="image-link"
+            id="image-link-input"
+            placeholder="Image Link"
+            class="modal__input"
+          />
+          <button class="modal__create-button">Create</button>
         </form>
       </div>
     </div>
