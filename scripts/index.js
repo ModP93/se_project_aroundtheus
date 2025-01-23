@@ -28,13 +28,19 @@ const initialCards=[
 
 const profile=document.querySelectorAll('.profile');
 const editButton=document.querySelector('.profile__edit-button');
-const profileEditModal=document.querySelector('.modal__profile');
+const addImageButton=document.querySelector('.profile__add-button');
+const profileEditModal=document.querySelector('#edit-modal');
+const addImageModal=document.querySelector('#image-modal');
 const modalContainer=document.querySelector('.modal__container');
 const editCloseButton=document.querySelector('.modal__close-button');
 const profileName=document.querySelector('.profile__name');
+const imageTitle=document.querySelector('.card__title');
 const profileDescription=document.querySelector('.profile__description');
+const imageLink=document.querySelector('.card__image');
 const profileNameInput=document.querySelector('#profile-name-input');
+const imageTitleInput=document.querySelector('#title-input');
 const profileDescriptionInput=document.querySelector('#profile-description-input');
+const imageLinkInput=document.querySelector('#image-link-input');
 const profileEditModalForm=profileEditModal.querySelector('.modal__form');
 const cardGallaryElement=document.querySelector('.cards__gallery');
 const cardTemplate=document.querySelector('#card-template').content.firstElementChild;
@@ -46,8 +52,16 @@ const cardTemplate=document.querySelector('#card-template').content.firstElement
     profileEditModal.classList.add('modal_open');
 }
 
+function addImage() {
+    imageTitleInput.value=imageTitle.textContent;
+    imageLinkInput.value=imageLink.src;
+
+    addImageModal.classList.add('modal_open');
+}
+
 function closeEditProfile() {
     profileEditModal.classList.remove('modal_open');
+    addImageModal.classList.remove('modal_open');
 }
 
 function getCardElement(data) {
@@ -66,6 +80,15 @@ profileEditModalForm.addEventListener('submit', (evt) => {
     evt.preventDefault();
     profileName.textContent=profileNameInput.value;
     profileDescription.textContent=profileDescriptionInput.value;
+    closeEditProfile();
+})
+
+addImageButton.addEventListener('click', addImage);
+editCloseButton.addEventListener('click', closeEditProfile);
+addImageModal.addEventListener('submit', (evt) => {
+    evt.preventDefault();
+    imageTitle.textContent=imageTitleInput.value;
+    imageLink.src=imageLinkInput.value;
     closeEditProfile();
 })
 

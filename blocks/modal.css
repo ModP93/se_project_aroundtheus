@@ -1,4 +1,4 @@
-.modal__add-page {
+.modal {
   position: fixed;
   z-index: 999;
   top: 0;
@@ -15,7 +15,7 @@
 .modal_open {
   display: flex;
 }
-.modal__container_add-page {
+.modal__container {
   background-color: #fff;
   margin: 0;
   padding: 0;
@@ -34,7 +34,7 @@
   right: -40px;
   cursor: pointer;
 }
-.modal__new-place {
+.modal__edit-profile {
   font-family: "Inter", Arial, sans-serif;
   font-weight: 900;
   color: #000;
@@ -68,6 +68,28 @@
   font-size: 14px;
   line-height: 16.94px;
 }
+.modal__save-button {
+  width: 358px;
+  height: 50.15px;
+  margin: 48px auto 36.51px;
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 400;
+  color: #fff;
+  font-size: 18px;
+  line-height: 21.78px;
+  background-color: #000;
+  border-radius: 2px;
+}
+
+.modal__new-place {
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 900;
+  color: #000;
+  font-size: 24px;
+  line-height: 29.05px;
+  margin: 34px 0 0 36px;
+}
+
 .modal__create-button {
   width: 358px;
   height: 50.15px;
@@ -82,7 +104,7 @@
 }
 
 @media screen and (max-width: 650px) {
-  .modal__container_add-page {
+  .modal__container {
     width: 282px;
     height: 322px;
   }
@@ -93,7 +115,7 @@
     top: -61px;
     right: 20px;
   }
-  .modal__new-place {
+  .modal__edit-profile {
     font-size: 18px;
     line-height: 21.78px;
     margin-left: 18px;
@@ -106,6 +128,19 @@
     width: 238px;
     height: 27px;
   }
+  .modal__save-button {
+    width: 238px;
+    height: 46px;
+    font-size: 14px;
+    line-height: 16.94px;
+  }
+
+  .modal__new-place {
+    font-size: 18px;
+    line-height: 21.78px;
+    margin-left: 18px;
+  }
+ 
   .modal__create-button {
     width: 238px;
     height: 46px;

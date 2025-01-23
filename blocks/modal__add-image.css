@@ -1,4 +1,4 @@
-.modal__profile {
+.modal__add-image {
   position: fixed;
   z-index: 999;
   top: 0;
@@ -15,7 +15,8 @@
 .modal_open {
   display: flex;
 }
-.modal__container {
+
+/*.modal__container {
   background-color: #fff;
   margin: 0;
   padding: 0;
@@ -23,7 +24,8 @@
   position: relative;
   width: 430px;
   height: 330px;
-}
+}*/
+
 .modal__close-button {
   border: none;
   background-color: transparent;
@@ -34,7 +36,7 @@
   right: -40px;
   cursor: pointer;
 }
-.modal__edit-profile {
+.modal__new-place {
   font-family: "Inter", Arial, sans-serif;
   font-weight: 900;
   color: #000;
@@ -68,7 +70,7 @@
   font-size: 14px;
   line-height: 16.94px;
 }
-.modal__save-button {
+.modal__create-button {
   width: 358px;
   height: 50.15px;
   margin: 48px auto 36.51px;
@@ -82,10 +84,10 @@
 }
 
 @media screen and (max-width: 650px) {
-  .modal__container {
+  /* .modal__container_add-page {
     width: 282px;
     height: 322px;
-  }
+  } */
   .modal__close-button {
     /* the modal's close button is meant to shrink 14px for mobile screens*/
     width: 26px;
@@ -93,7 +95,7 @@
     top: -61px;
     right: 20px;
   }
-  .modal__edit-profile {
+  .modal__new-place {
     font-size: 18px;
     line-height: 21.78px;
     margin-left: 18px;
@@ -106,7 +108,7 @@
     width: 238px;
     height: 27px;
   }
-  .modal__save-button {
+  .modal__create-button {
     width: 238px;
     height: 46px;
     font-size: 14px;
