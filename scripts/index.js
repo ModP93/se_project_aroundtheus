@@ -40,7 +40,8 @@ const editButton=document.querySelector('.profile__edit-button');
 const addImageButton=document.querySelector('.profile__add-button');
 const editCloseButton=profileEditModal.querySelector('.modal__close-button');
 const addImageCloseButton=addImageModal.querySelector('.modal__close-button');
-// const likeButtons=document.querySelectorAll('.card__like-button');
+// const likeButton=cardElement.querySelector('.card__like-button'); - defined only in getCardElement function
+// const deleteButton=cardElement.querySelector('.card__delete-button'); - defined only in getCardElement function
 
 //Values
 const profileDescription=document.querySelector('.profile__description');
@@ -50,6 +51,11 @@ const profileDescriptionInput=document.querySelector('#profile-description-input
 const imageLinkInput=addImageModalForm.querySelector('#image-link-input');
 const cardGallaryElement=document.querySelector('.cards__gallery');
 const cardTemplate=document.querySelector('#card-template').content.firstElementChild;
+const modalImageElement=document.querySelector('.modal__image');
+const modalCaptionElement=document.querySelector('.modal__caption');
+const cardImageElement=document.querySelector('.card__image');
+
+
 
 //Functions
 
@@ -84,6 +90,16 @@ function createCard(evt) {
     cardGallaryElement.prepend(cardElement);
     closeModal(addImageModal);
 }
+
+
+function handleImageClick(data) {
+    modalImageElement.src=data.link
+    modalImageElement.alt=data.name
+    modalCaptionElement.textContent=data.name
+    openModal(modal);
+}
+
+cardImageElement.addEventListener('click', () => handleImageClick(data));
 
 //Opening Edit Profile Form
 editButton.addEventListener('click', ()=> {
@@ -124,10 +140,8 @@ function getCardElement(data) {
     return cardElement;
 }
 
-//Getting the Cards  
+//Renedering the Cards  
 initialCards.forEach((data) => {
     const cardElement=getCardElement(data);
     cardGallaryElement.prepend(cardElement);
 })
-
-//Like Button Activating
