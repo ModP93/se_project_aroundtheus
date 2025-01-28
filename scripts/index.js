@@ -27,6 +27,7 @@ const initialCards=[
     ]
 
 //Modals&Forms
+// const modal = document.querySelectorAll('.modal');
 const profile=document.querySelectorAll('.profile');
 const profileEditModal=document.querySelector('#edit-modal');
 const addImageModal=document.querySelector('#image-modal');
@@ -53,25 +54,19 @@ const cardGallaryElement=document.querySelector('.cards__gallery');
 const cardTemplate=document.querySelector('#card-template').content.firstElementChild;
 const modalImageElement=document.querySelector('.modal__image');
 const modalCaptionElement=document.querySelector('.modal__caption');
-const cardImageElement=document.querySelector('.card__image');
+const cardModal=document.getElementById('card__modal');
 
-
-
-//Functions
-
-//Modal Functioning***
-
-//Open Modal
+//Modal Functions
 function closeModal(modal) {
     modal.classList.remove('modal_open');
 }
 
-//Close Modal
 function openModal(modal) {
+    console.log(modal);
     modal.classList.add('modal_open');
 }
 
-//Editing Profile & New Cards
+//Edit Profile Modal - Add Button Modal - Card Modal
 function editModalSubmit(evt) {
     evt.preventDefault();
     profileName.textContent=profileNameInput.value;
@@ -96,29 +91,28 @@ function handleImageClick(data) {
     modalImageElement.src=data.link
     modalImageElement.alt=data.name
     modalCaptionElement.textContent=data.name
-    openModal(modal);
+    openModal(cardModal);
 }
 
-cardImageElement.addEventListener('click', () => handleImageClick(data));
+// cardImageElement.addEventListener('click', () => handleImageClick(data));
 
-//Opening Edit Profile Form
+//Buttons Functions, Edit Profile - Add Image
 editButton.addEventListener('click', ()=> {
     profileNameInput.value=profileName.textContent;
     profileDescriptionInput.value=profileDescription.textContent;
 
     openModal(profileEditModal);
-})
+});
 editCloseButton.addEventListener('click', ()=>closeModal(profileEditModal));
 profileEditModalForm.addEventListener('submit', editModalSubmit);
 
-//Opening New Card Form
 addImageButton.addEventListener('click', ()=>openModal(addImageModal));
 addImageCloseButton.addEventListener('click', ()=>closeModal(addImageModal));
 addImageModalForm.addEventListener('submit', createCard);
 
 //Functions for Cards***
 
-// Add/remove Card Template & Like Button Function
+//Add/Remove Card Template & Like/Delete Button Functions - Click Picture for Card View Image Modal
 function getCardElement(data) {
     const cardElement=cardTemplate.cloneNode(true);
     const cardImageElement=cardElement.querySelector('.card__image');
@@ -134,9 +128,8 @@ function getCardElement(data) {
         cardElement.remove('card');
     })
 
-    cardImageElement.src=data.link
-    cardImageElement.alt=data.name
-    cardTitleElement.textContent=data.name
+    cardImageElement.addEventListener('click', handleImageClick(data));
+    
     return cardElement;
 }
 
