@@ -113,12 +113,30 @@
   height: 330px;
 }
 
-.view_card-image {
-
+.modal__close-button_image {
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: -3px;
+  right: -181px;
+  cursor: pointer;
 }
 
-.view_card-title {
+.modal__image {
+  max-width: 75vw;
+  max-height: 75vh;
+  margin: auto;
+  padding: 0;
+}
 
+.modal__caption {
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.52px;
+  text-align: left;
 }
 
 @media screen and (max-width: 650px) {
@@ -158,7 +176,7 @@
     line-height: 21.78px;
     margin-left: 18px;
   }
- 
+
   .modal__create-button {
     width: 238px;
     height: 46px;
