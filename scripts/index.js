@@ -87,17 +87,16 @@ function createCard(evt) {
 
 
 function handleImageClick(data) {
-    const cardElement=cardTemplate.cloneNode(true);
-    const cardTitleElement=cardElement.querySelector('.card__title');
+    const closeModalButton = cardModal.querySelector('.modal__close-button_image');
 
     modalImageElement.src=data.link
     modalImageElement.alt=data.name
-    cardTitleElement.textContent=data.name
     modalCaptionElement.textContent=data.name
-    openModal(cardModal);
-}
 
-// cardImageElement.addEventListener('click', () => handleImageClick(data));
+    openModal(cardModal);
+    closeModalButton.addEventListener('click', () => closeModal(cardModal));
+
+}
 
 //Buttons Functions, Edit Profile - Add Image
 editButton.addEventListener('click', ()=> {
@@ -131,7 +130,7 @@ function getCardElement(data) {
         cardElement.remove('card');
     })
 
-    cardImageElement.addEventListener('click', handleImageClick(data));
+    cardImageElement.addEventListener('click', () => handleImageClick(data));
     
     cardImageElement.src=data.link
     cardImageElement.alt=data.name
