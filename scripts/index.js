@@ -27,22 +27,19 @@ const initialCards=[
     ]
 
 //Modals&Forms
-// const modal = document.querySelectorAll('.modal');
-const profile = document.querySelectorAll('.profile');
 const profileEditModal = document.querySelector('#edit-modal');
 const addImageModal = document.querySelector('#image-modal');
 const profileName = document.querySelector('.profile__name');
 const profileEditModalForm = profileEditModal.querySelector('.modal__form');
 const addImageModalForm = addImageModal.querySelector('.modal__form');
-// const modalContainer=document.querySelector('.modal__container');
+const cardModal=document.querySelector('#card-modal');
 
 //Buttons
 const editButton = document.querySelector('.profile__edit-button');
 const addImageButton = document.querySelector('.profile__add-button');
 const editCloseButton = profileEditModal.querySelector('.modal__close-button');
 const addImageCloseButton = addImageModal.querySelector('.modal__close-button');
-// const likeButton=cardElement.querySelector('.card__like-button'); - defined only in getCardElement function
-// const deleteButton=cardElement.querySelector('.card__delete-button'); - defined only in getCardElement function
+const closeModalButton = cardModal.querySelector('.modal__close-button_image');
 
 //Values
 const profileDescription = document.querySelector('.profile__description');
@@ -54,7 +51,6 @@ const cardGallaryElement=document.querySelector('.cards__gallery');
 const cardTemplate=document.querySelector('#card-template').content.firstElementChild;
 const modalImageElement=document.querySelector('.modal__image');
 const modalCaptionElement=document.querySelector('.modal__caption');
-const cardModal=document.querySelector('#card-modal');
 
 //Modal Functions
 function closeModal(modal) {
@@ -66,51 +62,45 @@ function openModal(modal) {
 }
 
 //Edit Profile Modal - Add Button Modal - Card Modal
-function editModalSubmit(evt) {
+function hanldeProfileFormSubmit(evt) {
     evt.preventDefault();
     profileName.textContent=profileNameInput.value;
     profileDescription.textContent=profileDescriptionInput.value;
     closeModal(profileEditModal);
 }
 
-function createCard(evt) {
+function handleAddCardClick(evt) {
     evt.preventDefault();
-    const name=imageTitleInput.value;
-    const link=imageLinkInput.value;
-    const cardElement = getCardElement({
-        name, link
-    });
-
-    cardGallaryElement.prepend(cardElement);
+    
+    renderCard({name:imageTitleInput.value, link:imageLinkInput.value,}, cardGallaryElement);
     closeModal(addImageModal);
+    evt.target.reset();
 }
 
 
 function handleImageClick(data) {
-    const closeModalButton = cardModal.querySelector('.modal__close-button_image');
-
     modalImageElement.src=data.link
     modalImageElement.alt=data.name
     modalCaptionElement.textContent=data.name
 
     openModal(cardModal);
-    closeModalButton.addEventListener('click', () => closeModal(cardModal));
-
 }
 
-//Buttons Functions, Edit Profile - Add Image
+//Buttons Functions, Edit Profile - Add Image - Card Modal
 editButton.addEventListener('click', ()=> {
     profileNameInput.value=profileName.textContent;
     profileDescriptionInput.value=profileDescription.textContent;
 
     openModal(profileEditModal);
 });
+
 editCloseButton.addEventListener('click', ()=>closeModal(profileEditModal));
-profileEditModalForm.addEventListener('submit', editModalSubmit);
+profileEditModalForm.addEventListener('submit', hanldeProfileFormSubmit);
 
 addImageButton.addEventListener('click', ()=>openModal(addImageModal));
 addImageCloseButton.addEventListener('click', ()=>closeModal(addImageModal));
-addImageModalForm.addEventListener('submit', createCard);
+addImageModalForm.addEventListener('submit', handleAddCardClick);
+closeModalButton.addEventListener('click', () => closeModal(cardModal));
 
 //Functions for Cards***
 
@@ -127,7 +117,7 @@ function getCardElement(data) {
     });
     
     deleteButton.addEventListener('click', ()=>{
-        cardElement.remove('card');
+        cardElement.remove();
     })
 
     cardImageElement.addEventListener('click', () => handleImageClick(data));
@@ -138,8 +128,14 @@ function getCardElement(data) {
     return cardElement;
 }
 
+//Gathers Data for Cards
+function renderCard(data, cardGallaryElement) {
+  
+    const cardElement = getCardElement(data);
+    cardGallaryElement.prepend(cardElement);
+  }
+
 //Renedering the Cards  
 initialCards.forEach((data) => {
-    const cardElement=getCardElement(data);
-    cardGallaryElement.prepend(cardElement);
+    renderCard(data, cardGallaryElement);
 })

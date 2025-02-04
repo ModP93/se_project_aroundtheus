@@ -107,7 +107,7 @@
   border-radius: 2px;
 }
 
-.modal_container-card {
+.modal_container_card {
   background-color: transparent;
   margin: 0;
   padding: 0;
@@ -189,5 +189,12 @@
     height: 46px;
     font-size: 14px;
     line-height: 16.94px;
+  }
+
+  .modal__close-button_image {
+    width: 30px;
+    height: 30px;
+    top: -4px;
+    right: -277px;
   }
 }
