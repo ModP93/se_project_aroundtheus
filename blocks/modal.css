@@ -107,7 +107,7 @@
   border-radius: 2px;
 }
 
-.modal_container_card {
+#card-container {
   background-color: transparent;
   margin: 0;
   padding: 0;
