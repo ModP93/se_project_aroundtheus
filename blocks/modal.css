@@ -198,3 +198,12 @@
     right: -277px;
   }
 }
+
+@media screen and (max-width: 320px) {
+  .modal__close-button_image {
+    width: 14px;
+    height: 14px;
+    top: -25px;
+    right: -200px;
+  }
+}
